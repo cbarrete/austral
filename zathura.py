@@ -31,4 +31,4 @@ mappings = {
 
 def generate(palette):
     for key, color in mappings.items():
-        yield 'set {} {}\n'.format(key, palette[color])
+        yield 'set {} "{}"\n'.format(key, palette[color])
