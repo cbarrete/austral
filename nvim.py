@@ -173,7 +173,7 @@ groups = {
     },
     'MatchParen': {
         'fg': 'blue',
-        'gui': 'underline',
+        'bg': 'bg',
     },
     'NonText': {
         'fg': 'special_grey',
