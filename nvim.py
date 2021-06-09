@@ -268,6 +268,12 @@ groups = {
 
 def generate(palette):
     yield 'set termguicolors'
+    yield 'set background=dark'
+    yield 'hi clear'
+    yield 'if exists("syntax_on")'
+    yield '    syntax reset'
+    yield 'endif'
+    yield 'let g:colors_name="austral"'
     palette['NONE'] = 'NONE'
     for group, values in groups.items():
         line = 'hi {}'.format(group)
