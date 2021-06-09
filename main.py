@@ -3,6 +3,7 @@ import yaml
 
 import alacritty
 import zathura
+import nvim
 
 from austral import palette
 
@@ -16,3 +17,9 @@ alacritty_config = alacritty.get_current_config(alacritty_path)
 alacritty_config['colors'] = alacritty.make_colors_config(palette)
 with open(alacritty_path, 'w') as file:
     yaml.dump(alacritty_config, file)
+
+nvim_path = home + '/.config/nvim/colors'
+Path(nvim_path).mkdir(parents=True, exist_ok=True)
+with open(nvim_path + '/austral.vim', 'w') as file:
+    for hi in nvim.generate(palette):
+        file.write(hi)
