@@ -22,4 +22,4 @@ nvim_path = home + '/.config/nvim/colors'
 Path(nvim_path).mkdir(parents=True, exist_ok=True)
 with open(nvim_path + '/austral.vim', 'w') as file:
     for hi in nvim.generate(palette):
-        file.write(hi)
+        file.write(hi + '\n')

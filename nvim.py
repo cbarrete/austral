@@ -267,6 +267,7 @@ groups = {
 }
 
 def generate(palette):
+    yield 'set termguicolors'
     palette['NONE'] = 'NONE'
     for group, values in groups.items():
         line = 'hi {}'.format(group)
@@ -276,5 +277,4 @@ def generate(palette):
             line += ' guibg=' + palette[values['bg']]
         if 'gui' in values:
             line += ' gui=' + values['gui']
-        line += '\n'
         yield line
