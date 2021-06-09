@@ -89,12 +89,9 @@ groups = {
     'SpecialComment': {
         'fg': 'line_grey',
     },
-    'Error': {
-        'fg': 'error_red',
-        'gui': 'bold,reverse',
-    },
     'Todo': {
         'fg': 'purple',
+        'bg': 'NONE',
         'gui': 'bold,italic',
     },
     'Underlined': {
@@ -149,8 +146,13 @@ groups = {
     'diffRemoved': {
         'fg': 'red'
     },
+    'Error': {
+        'fg': 'bg',
+        'bg': 'error_red',
+    },
     'ErrorMsg': {
         'fg': 'error_red',
+        'bg': 'bg',
     },
     'VertSplit': {
         'fg': 'vertsplit',
@@ -265,6 +267,7 @@ groups = {
 }
 
 def generate(palette):
+    palette['NONE'] = 'NONE'
     for group, values in groups.items():
         line = 'hi {}'.format(group)
         if 'fg' in values:
