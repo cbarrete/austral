@@ -4,7 +4,7 @@ import yaml
 import alacritty
 import zathura
 
-from aurora import palette
+from austral import palette
 
 home = str(Path.home())
 with open(home + '/.config/zathura/colors', 'w') as file:

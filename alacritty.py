@@ -1,7 +1,7 @@
 from pathlib import Path
 import yaml
 
-from aurora import palette
+from austral import palette
 
 def get_current_config(path):
     path = Path(path)
