@@ -147,12 +147,8 @@ groups = {
         'fg': 'red'
     },
     'Error': {
-        'fg': 'bg',
-        'bg': 'error_red',
-    },
-    'ErrorMsg': {
         'fg': 'error_red',
-        'bg': 'bg',
+        'bg': 'NONE',
     },
     'VertSplit': {
         'fg': 'vertsplit',
@@ -255,7 +251,8 @@ groups = {
         'fg': 'visual_grey',
     },
     'WarningMsg': {
-        'bg': 'yellow',
+        'fg': 'yellow',
+        'gui': 'NONE',
     },
     'WildMenu': {
         'fg': 'black',
@@ -264,6 +261,14 @@ groups = {
     'EndOfBuffer': {
         'fg': 'black',
     },
+    'healthSuccess': {
+        'fg': 'green',
+        'bg': 'NONE',
+    },
+}
+
+links = {
+    'ErrorMsg': 'Error',
 }
 
 def generate(palette):
@@ -284,3 +289,5 @@ def generate(palette):
         if 'gui' in values:
             line += ' gui=' + values['gui']
         yield line
+    for from_group, to_group in links.items():
+        yield 'hi! link {} {}'.format(from_group, to_group)
