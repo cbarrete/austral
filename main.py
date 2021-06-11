@@ -9,8 +9,8 @@ from austral import palette
 
 home = str(Path.home())
 with open(home + '/.config/zathura/colors', 'w') as file:
-    for line in zathura.generate(palette):
-        file.write(line)
+    for line in zathura.make_colors_config(palette):
+        file.write(line + '\n')
 
 alacritty_path = home + '/.config/alacritty/alacritty.yml'
 alacritty_config = alacritty.get_current_config(alacritty_path)

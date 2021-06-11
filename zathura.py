@@ -29,6 +29,6 @@ mappings = {
     'statusbar-fg': 'fg',
 }
 
-def generate(palette):
+def make_colors_config(palette):
     for key, color in mappings.items():
-        yield 'set {} "{}"\n'.format(key, palette[color])
+        yield 'set {} "{}"'.format(key, palette[color])
