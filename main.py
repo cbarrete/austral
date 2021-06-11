@@ -2,8 +2,9 @@ from pathlib import Path
 import yaml
 
 import alacritty
-import zathura
 import nvim
+import xresources
+import zathura
 
 from austral import palette
 
@@ -23,3 +24,7 @@ Path(nvim_path).mkdir(parents=True, exist_ok=True)
 with open(nvim_path + '/austral.vim', 'w') as file:
     for hi in nvim.generate(palette):
         file.write(hi + '\n')
+
+with open(home + '/.config/Xresources.colors', 'w') as file:
+    for line in xresources.make_colors_config(palette):
+        file.write(line + '\n')
