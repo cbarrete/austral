@@ -14,7 +14,7 @@ groups = {
         'fg': 'orange',
     },
     'Character': {
-        'fg': 'orange',
+        'fg': 'red',
     },
     'Number': {
         'fg': 'light_green',
@@ -92,7 +92,7 @@ groups = {
     'Todo': {
         'fg': 'purple',
         'bg': 'NONE',
-        'gui': 'bold,italic',
+        'gui': 'italic',
     },
     'Underlined': {
         'fg': 'cyan',
@@ -151,7 +151,8 @@ groups = {
         'bg': 'NONE',
     },
     'VertSplit': {
-        'fg': 'vertsplit',
+        'fg': 'line_grey',
+        'bg': 'bg',
     },
     'FoldColumn': {
         'fg': 'yellow',
@@ -167,18 +168,19 @@ groups = {
         'bg': 'line_grey',
     },
     'LineNr': {
-        'fg': 'gutter_fg_grey',
+        'fg': 'line_grey',
     },
     'MatchParen': {
-        'fg': 'blue',
-        'bg': 'bg',
+        'fg': 'error_red',
+        'bg': 'NONE',
+        'gui': 'bold',
     },
     'NonText': {
         'fg': 'special_grey',
     },
     'Pmenu': {
         'fg': 'white',
-        'bg': 'menu_grey',
+        'bg': 'special_grey',
     },
     'PmenuSel': {
         'fg': 'black',

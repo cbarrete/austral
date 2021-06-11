@@ -16,15 +16,12 @@ palette = {
     'purple': '#B48EAD',
     'cyan': '#8FBCBB',
     'white': '#D8DEE9',
-    'black': '#232731',
+    'black': black,
 
     'grey': grey,
 
     'line_grey': grey,
-    'gutter_fg_grey': '#4B5263',
     'cursor_grey': '#2C323C',
     'visual_grey': '#4C566A',
-    'menu_grey': '#282C34',
     'special_grey': '#3B4048',
-    'vertsplit': '#2E3440',
 }
