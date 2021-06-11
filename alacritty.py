@@ -1,8 +1,6 @@
 from pathlib import Path
 import yaml
 
-from austral import palette
-
 def get_current_config(path):
     path = Path(path)
     if not path.is_file():
