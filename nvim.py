@@ -153,6 +153,7 @@ groups = {
     'VertSplit': {
         'fg': 'line_grey',
         'bg': 'bg',
+        'gui': 'NONE',
     },
     'FoldColumn': {
         'fg': 'yellow',
