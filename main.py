@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 import yaml
 
@@ -24,7 +25,10 @@ Path(nvim_path).mkdir(parents=True, exist_ok=True)
 with open(nvim_path + '/austral.vim', 'w') as file:
     for hi in nvim.generate(palette):
         file.write(hi + '\n')
+# TODO go over nvim instances and source config again
 
-with open(home + '/.config/Xresources.colors', 'w') as file:
+xresources_path = home + '/.config/Xresources.colors'
+with open(xresources_path, 'w') as file:
     for line in xresources.make_colors_config(palette):
         file.write(line + '\n')
+os.system('xrdb -merge ' + xresources_path)
