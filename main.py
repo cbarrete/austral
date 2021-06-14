@@ -32,3 +32,5 @@ with open(xresources_path, 'w') as file:
     for line in xresources.make_colors_config(palette):
         file.write(line + '\n')
 os.system('xrdb -merge ' + xresources_path)
+
+os.system('pkill -USR1 polybar')
