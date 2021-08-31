@@ -36,11 +36,11 @@ def make_colors_config(palette):
         },
         'cursor': {
             'text': 'CellBackground',
-            'cursor': palette['green'],
+            'cursor': palette['fg'],
         },
         'vi_mode_cursor': {
             'text': 'CellBackground',
-            'cursor': palette['green'],
+            'cursor': palette['fg'],
         },
         'search': {
             'matches': {
